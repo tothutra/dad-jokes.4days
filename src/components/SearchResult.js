@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const SearchResult = ({result,...props}) => (
   <div className="search-result grid-item z-5">
-    <h1 className="nunito f1">{result}</h1>
+    <h1 className="nunito f1-ns f2">{result}</h1>
   </div>
 )
 

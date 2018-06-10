@@ -41,3 +41,12 @@ input {
   text-decoration: none;
   color: #000
 }
+
+@media (max-width: 750px) {
+  .page {
+    padding: 2vh 1rem;
+  }
+  .search input {
+    font-size: 1.5rem;
+  }
+}
