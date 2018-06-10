@@ -15,7 +15,8 @@ class App extends Component {
       searchTerm: '',
       hintText: 'Hit enter to search',
       loading: false,
-      result: null
+      result: null,
+      hasResult: false,
     }
   }
 
@@ -35,7 +36,8 @@ class App extends Component {
         this.setState((prevState) => ({
           ...prevState,
           loading: false,
-          result: randomJoke(results).joke
+          result: randomJoke(results).joke,
+          hasResult: true
         }))
       }
     } catch (error) {
@@ -63,16 +65,18 @@ class App extends Component {
   render() {
     const {searchTerm} = this.state
     return (
-      <div>
+      <div className="page flex flex-column min-vh-100 tc">
         <Header {...this.state} />
-        <input
-          className=""
-          placeholder="About what, sun?"
-          value={searchTerm}
-          onChange={this.handleChange}
-          onKeyPress={this.handleKeyPress}
-        />
-        <SearchResult {...this.state} {...this.actions}/>
+        <div className="search grid">
+          <input
+            className="grid-item bg-transparent bn nunito f1 outline-0 tc"
+            placeholder="Hit enter or type something!"
+            value={searchTerm}
+            onChange={this.handleChange}
+            onKeyPress={this.handleKeyPress}
+          />
+          <SearchResult {...this.state} {...this.actions}/>
+        </div>
         <Hint {...this.state} />
         <Footer {...this.state} />
       </div>

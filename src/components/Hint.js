@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
 const Hint = ({hintText, ...props}) => (
-  <div>{hintText}</div>
+  <div className="hint space-mono">{hintText}</div>
 )
 export default Hint;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
 const Footer = ({hintText, ...props}) => (
-  <div>Lovingly made by Tra To | IG | GH </div>
+  <div className="space-mono">Lovingly made by Tra To | IG | GH | Power by Icanhazjoke | Got joke? submit to this dude!</div>
 )
 export default Footer;

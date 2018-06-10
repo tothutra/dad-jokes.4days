@@ -1,5 +1,39 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  background-color: #fff001;
+  color: #000;
+}
+
+.nunito {
+  font-family: 'Nunito', sans-serif;
+}
+.space-mono {
+  font-family: 'Space Mono', monospace;
+}
+
+.page {
+  padding: 2vh;
+}
+
+.search {
+  margin: auto;
+  width: 100%;
+}
+input {
+  width: 100%;
+}
+.search::placeholder {
+  font-family: 'Nunito', sans-serif;
+}
+.search-result {
+  background-color: #fff001;
+}
+.hint {
+
+}
+.grid {
+  display: grid;
+  place-items: center;
+}
+.grid-item {
+  grid-area:1/1
 }
