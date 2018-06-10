@@ -61,12 +61,24 @@ class App extends Component {
       this.searchJoke(this.state.searchTerm)
     }
   }
+  actions = {
+    clearSearch: () => {
+      this.setState({
+        searchTerm: '',
+        hintText: 'Hit enter to search',
+        loading: false,
+        result: null,
+        hasResult: false,
+      })
+      this.textInput.focus()
+    }
+  }
 
   render() {
     const {searchTerm} = this.state
     return (
       <div className="page flex flex-column min-vh-100 tc">
-        <Header {...this.state} />
+        <Header {...this.state} {...this.actions}/>
         <div className="search grid">
           <input
             className="grid-item bg-transparent bn nunito f1 outline-0 tc"
@@ -74,6 +86,7 @@ class App extends Component {
             value={searchTerm}
             onChange={this.handleChange}
             onKeyPress={this.handleKeyPress}
+            ref={input => {this.textInput = input}}
           />
           <SearchResult {...this.state} {...this.actions}/>
         </div>

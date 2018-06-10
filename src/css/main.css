@@ -11,7 +11,7 @@ body {
 }
 
 .page {
-  padding: 2vh;
+  padding: 2vh 9rem;
 }
 
 .search {
@@ -36,4 +36,8 @@ input {
 }
 .grid-item {
   grid-area:1/1
+}
+.footer a {
+  text-decoration: none;
+  color: #000
 }
